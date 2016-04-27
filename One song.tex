@@ -1,4 +1,4 @@
-\documentclass[a4,openany,landscape]{article}
+\documentclass[11pt,a4,openany]{article}
 %\documentclass[11pt,a5,landscape,openany]{article}
 \usepackage{xcolor}
 \usepackage{makeidx}
@@ -11,6 +11,7 @@
 %\usepackage{amssymb}
 %\usepackage{epstopdf}
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%\geometry{letterpaper}    
 
 \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, 
             citecolor=blue, urlcolor=blue]{hyperref}
@@ -18,45 +19,38 @@
 \setlength{\topmargin}{-0.5cm}
 \setlength{\headheight}{0cm}
 \setlength{\headsep}{-0.5cm}
-\setlength{\textheight}{18cm}
-\setlength{\textwidth}{24cm}
-\setlength{\oddsidemargin}{-0.5cm}
-\setlength{\evensidemargin}{-0.5cm}	
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{18cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
 \setlength{\parindent}{0.25cm}
 %\setlength{\parskip}{0.25cm}
 
 
-\songpos{2}
-
 \renewcommand\printchord[1]{{\color{red!70!black}#1}}
-
-\renewcommand{\songchapter}{\subsection}
-\renewcommand{\songsection}{\subsection}
 
 \newcommand{\U}{\Uparrow}
 \newcommand{\D}{\Downarrow}
 
 
 % ------------------- Title and Author -----------------------------
-\title{AMeeSpeel KuylKampVuur Songbook}
-\author{gathered by bokthor@kuylkamp.nl}
-%\newindex{titleidx}{titleidx}
+\title{A Guitar Songbook}
+\author{gathered by Natasja \& Coen}
+\newindex{titleidx}{titleidx}
 %\newauthorindex{authidx}{authidx}
-
-%\frontmatter
 
 \begin{document}
 %\songcolumns{2}
 
-\maketitle
-
+%\frontmatter
+%\maketitle
 %\tableofcontents
 %\showindex{Al hun liedjes}{titleidx}
 
 %\showindex[2]{Nummers}{titleidx}
 %\showindex[2]{artiesten}{authidx}
 
-
+\pagenumbering{gobble}
 %\begin{abc}[name=c-dur]
 %X: 1 % start of header
 %K: C % scale: C major
@@ -66,28 +60,10 @@
 
 \begin{songs}{} %{titleidx,authidx}
 
+	%\onecolumn
 	\songcolumns{2}
 
-
-	\include{wildrover/song}					
-	\include{Country_Roads/song}					
-	\include{wonderwall/song}
 	\include{browneyedgirl/song}
-	\include{risingsun/song}
-	\include{wheredidyousleeplastnight/song}
-	\include{comeasyouare/song}
-	\include{zombie/song}
-	\include{NeedleAndDamage/song}
-	\include{irishrover/song}
-	\include{howyouremindme/song}
-	\include{riptide/song}
-	\include{smellsliketeenspirit/song}
-	\include{teenagedirtbag/song}
-	\include{amy/song}
-	\include{ShowMustGoOn/song}
-	\include{blue/song}
-	\include{happybirthday/song}
-	\include{langzalzeleven/song}
 
 
 %	\include{b/b}		
