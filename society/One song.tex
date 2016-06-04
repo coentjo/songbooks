@@ -1,0 +1,77 @@
+\documentclass[11pt,a4,openany]{article}
+%\documentclass[11pt,a5,landscape,openany]{article}
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{geometry}       
+\usepackage[chorded]{songs} 
+%\usepackage{abc}
+%\usepackage{lilypond}
+%\usepackage[parfill]{parskip}  
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{epstopdf}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%\geometry{letterpaper}    
+
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, 
+            citecolor=blue, urlcolor=blue]{hyperref}
+            
+\setlength{\topmargin}{-0.5cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{-0.5cm}
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{18cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\parindent}{0.25cm}
+%\setlength{\parskip}{0.25cm}
+
+
+\renewcommand\printchord[1]{{\color{red!70!black}#1}}
+
+\newcommand{\U}{\Uparrow}
+\newcommand{\D}{\Downarrow}
+
+
+% ------------------- Title and Author -----------------------------
+\newindex{titleidx}{titleidx}
+%\newauthorindex{authidx}{authidx}
+
+\begin{document}
+%\songcolumns{2}
+
+%\frontmatter
+%\maketitle
+%\tableofcontents
+%\showindex{Al hun liedjes}{titleidx}
+
+%\showindex[2]{Nummers}{titleidx}
+%\showindex[2]{artiesten}{authidx}
+
+\pagenumbering{gobble}
+%\begin{abc}[name=c-dur]
+%X: 1 % start of header
+%K: C % scale: C major
+%"Text"C4 G4 | (3FED c4 G2 |
+%\end{abc}
+%\newpage
+
+\begin{songs}{} %{titleidx,authidx}
+
+	%\onecolumn
+	\songcolumns{2}
+
+	\include{song}
+
+
+%	\include{b/b}		
+\end{songs}
+
+
+\bibliographystyle{plain-annote}
+\bibliography{mybibliography}
+
+
+\end{document}
+\end
+
