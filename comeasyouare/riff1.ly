@@ -4,11 +4,11 @@ Welcome to LilyPond
 
 
 \header{
-  title = "Theezakje"
+%  title = "Theezakje"
 }
 
 
-% notes and bass tab
+% notes and bass tab 
 
 <<
   \new Voice \with {
