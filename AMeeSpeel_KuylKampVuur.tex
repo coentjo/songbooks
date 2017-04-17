@@ -1,11 +1,12 @@
-\documentclass[a4,openany,landscape,tikz]{article}
+\documentclass[a4,openany,portrait,tikz]{article}
+%\documentclass[a4,openany,landscape,tikz]{article}
 %\documentclass[11pt,a5,landscape,openany]{article}
 \usepackage{xcolor}
 \usepackage{makeidx}
 \usepackage{geometry}       
 \usepackage[chorded]{songs} 
 \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref} 
-\usepackage{fancyhdr}
+%\usepackage{fancyhdr}
 %\usepackage{abc}
 %\usepackage{lilypond}
 %\usepackage[parfill]{parskip}  
@@ -20,15 +21,27 @@
 \usetikzlibrary{decorations.text}
 
 
+% this was used when it was landscape: 
+%\setlength{\topmargin}{-0.5cm}
+%\setlength{\headheight}{0cm}
+%\setlength{\headsep}{-0.5cm}
+%\setlength{\textheight}{18cm}
+%\setlength{\textwidth}{24cm}
+%\setlength{\oddsidemargin}{-0.5cm}
+%\setlength{\evensidemargin}{-0.5cm}	
+%\setlength{\parindent}{0.25cm}
+
 \setlength{\topmargin}{-0.5cm}
 \setlength{\headheight}{0cm}
 \setlength{\headsep}{-0.5cm}
-\setlength{\textheight}{18cm}
-\setlength{\textwidth}{24cm}
-\setlength{\oddsidemargin}{-0.5cm}
-\setlength{\evensidemargin}{-0.5cm}	
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{18cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
 \setlength{\parindent}{0.25cm}
-%\setlength{\parskip}{0.25cm}
+
+
+%never used? \setlength{\parskip}{0.25cm}
 
 
 \songpos{2}
@@ -52,6 +65,7 @@
 \newcommand{\U}{\Uparrow}
 \newcommand{\D}{\Downarrow}
 
+\pagenumbering{gobble}
 
 % ------------------- Title and Author -----------------------------
 \title{AMeeSpeel KuylKampVuur Songbook 2016}
@@ -86,7 +100,12 @@ Dit songbook is ook te vinden op internet, verstopt achter de URL \url{https://g
 Op die internetpagina staan ook een aantal links naar opnamen van een aantal nummers zoals ze ook in de map staan.  
 Natuurlijk heb je een gestemde gitaar nodig. Als je geen stemmer hebt kun je je mobiel gebruiken met een app: Zoek in de app store van je keuze op `\emph{Guitar Tuner}'. Zelf heb ik goeie ervaringen met `PitchLab Guitar Tuner' onder Android. 
 
+Na het KuylKamp ben ik weer wat nummers aan het toevoegen, niet allemaal geschikt als kampvuur, maar dat zoeken we volgend jaar vlak voor het KuylKamp wel weer uit... Check af en toe eens voor updates... 
+
 Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com} 
+
+\includegraphics[width=0.2\linewidth]{KK/guitar-image-7} 
+
 
 \begin{wrapfigure}{l}{0.25\textwidth}
 \includegraphics[width=0.3\linewidth]{KK/KuylKamp_vierkantje_logo} 
@@ -132,45 +151,77 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 %\newpage
 
 \begin{songs}{} %{titleidx,authidx}
+\songcolumns{1}
 
-	\songcolumns{2}
-
-
-	\include{wildrover/song}					
 	
+\renewcommand{\thesongnum}{A}
+	\include{actnaturally/song} 
+	\include{allrightnowFree/song}
+	\include{amy/song} 
+
+	
+\renewcommand{\thesongnum}{B}
+	\include{blue/song} 
+	\include{browneyedgirl/song} 
+		
+\renewcommand{\thesongnum}{C}
+	\include{comeasyouare/song} 
+	\include{Country_Roads/song}					
+
+\renewcommand{\thesongnum}{H}
+	\include{halleluja/song} 
+	\include{happybirthday/song} 
+	\include{risingsun/song} % House 
+	\include{howyouremindme/song} 
+%	\include{holiday/song} 
+
+\renewcommand{\thesongnum}{I}
+	\include{irisgoogoodolls/song}
+	\include{irishrover/song} 
+	
+\renewcommand{\thesongnum}{L}
+	\include{langzalzeleven/song} 
+
+\renewcommand{\thesongnum}{N}
+	\include{NeedleAndDamage/song} 
+
+\renewcommand{\thesongnum}{R}
+	\include{riptide/song} 
+	\include{rockinginthefreeworld/song} 
+
+\renewcommand{\thesongnum}{S}
+	\include{smellsliketeenspirit/song} 
+	\include{society/song} 
+	\include{soundofsilence/song_Am}     
+%		\include{soundofsilence/song_Em} 
+%	\include{ShowMustGoOn/song}
+
+\renewcommand{\thesongnum}{T}
+	\include{teenagedirtbag/song} 
+	\include{troy/song}
+
+\renewcommand{\thesongnum}{W}
+	\include{wheredidyousleeplastnight/song} 
+	\include{wildrover/song}					
+%	\songcolumns{2} % wonderwall not yet prepared for 1 page
+		\include{wonderwall/song_X}    %\setcounter{songnum}{2}
+%		\include{wonderwall/song} 
+%	\songcolumns{1}
+%	\include{wearethechampions/song}
+
+\renewcommand{\thesongnum}{Y}
+	\include{you_dont_know/song}
+
+\renewcommand{\thesongnum}{Z}
+	\include{zombie/song} 
+
+
+
 		\beginscripture{(had een oud Chinees spreekwoord kunnen zijn)}
 			Beter elke dag 5 minuten met in de hand een gitaar,
 			
 			Dan eenmaal per week een uur, 't is echt waar!
 		\endscripture	
-		
-	
-	\include{wonderwall/song_X}    \setcounter{songnum}{2}
-	\include{wonderwall/song} 
-	\include{browneyedgirl/song} 
-	\include{Country_Roads/song}					
-	\include{risingsun/song} 
-	\include{wheredidyousleeplastnight/song} 
-	\include{comeasyouare/song} 
-	\include{zombie/song} 
-	\include{NeedleAndDamage/song} 
-	\include{happybirthday/song} 
-	\include{langzalzeleven/song} 
-	\include{howyouremindme/song} 
-	\include{riptide/song} 
-	\include{smellsliketeenspirit/song} 
-	\include{amy/song} 
-	\include{blue/song} 
-	\include{irishrover/song} 
-	\include{society/song} 
-	\include{soundofsilence/song_Am}     \setcounter{songnum}{18}
-	\include{soundofsilence/song_Em} 
-	\include{you_dont_know/song}
-	\include{teenagedirtbag/song} 
-	\include{ShowMustGoOn/song} 
-	\include{actnaturally/song} 
-	\include{rockinginthefreeworld/song} 
-	
 	
 		\beginscripture{(Theo Maassen)}
 		Het enige dat wij nog echt tekortkomen is schaarste 
@@ -191,12 +242,16 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 
 
 
+
 %	\include{b/b}		
 \end{songs}
 
 
-\bibliographystyle{plain-annote}
-\bibliography{mybibliography}
+%\includegraphics[width=0.2\linewidth]{KK/guitar-image-7} 
+
+
+%\bibliographystyle{plain-annote}
+%\bibliography{mybibliography}
 
 
 \end{document}
