@@ -16,6 +16,7 @@
 %\usepackage{amssymb}
 %\usepackage{epstopdf}
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%\usepackage{xpatch}
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.text}
@@ -71,7 +72,8 @@
 \title{AMeeSpeel KuylKampVuur Songbook 2016}
 
 \author{gathered by Grobozeak-KKVO}
-%\newindex{titleidx}{titleidx}
+\newindex{titleidx}{titleidx}
+\indexsongsas{titleidx}{\thepage}
 %\newauthorindex{authidx}{authidx}
 
 %\frontmatter
@@ -135,6 +137,8 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 %\url{https://github.com/coentjo/songbooks/releases/download/v0.1/Amy_Green.Day.mp3}
 %\qrcode{https://github.com/coentjo/songbooks/releases/download/v0.1/Amy_Green.Day.mp3}
 
+\showindex[1]{Title index}{titleidx}
+
 
 %\tableofcontents 
 %\showindex{Al hun liedjes}{titleidx}
@@ -148,72 +152,97 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 %K: C % scale: C major
 %"Text"C4 G4 | (3FED c4 G2 |
 %\end{abc}
-%\newpage
+\newpage
 
-\begin{songs}{} %{titleidx,authidx}
+\begin{songs}{titleidx} %,authidx}
 \songcolumns{1}
 
 	
 \renewcommand{\thesongnum}{A}
 	\include{actnaturally/song} 
+	\include{AllOverYou/song}
 	\include{allrightnowFree/song}
 	\include{amy/song} 
+\newpage
+
 
 	
 \renewcommand{\thesongnum}{B}
+	\include{BasketCase/song} 
+	\include{BigMe/song} 
 	\include{blue/song} 
 	\include{browneyedgirl/song} 
+	\include{buddyholly/song} 				% TODO chords 
 		
-\renewcommand{\thesongnum}{C}
+\renewcommand{\thesongnum}{C} 
 	\include{comeasyouare/song} 
+	\include{ComeOutAndPlay/song} 
 	\include{Country_Roads/song}					
 
 \renewcommand{\thesongnum}{H}
 	\include{halleluja/song} 
-	\include{happybirthday/song} 
-	\include{risingsun/song} % House 
+	\include{hangontoyourego/song} 
+%	\include{happybirthday/song} 
+	\include{hittheroadjack/song} 				 	% TODO chords 
+	\include{holdon/song} 				 	% TODO chords 
+	\include{holiday/song} 				 	% TODO chords 
+	\include{houseoftherisingsun/song}  
 	\include{howyouremindme/song} 
 %	\include{holiday/song} 
 
 \renewcommand{\thesongnum}{I}
+	\include{IAlone/song}
+	\include{iloverocknroll/song}
 	\include{irisgoogoodolls/song}
-	\include{irishrover/song} 
-	
+	\include{irishrover/song} 				% TODO tussenspel uitzoeken !!
+
+\renewcommand{\thesongnum}{J}
+	\include{jerseygirl/song}			 	% TODO chords 
+	\include{jongeondernemer/song}	 	% TODO chords 
+		
 \renewcommand{\thesongnum}{L}
 	\include{langzalzeleven/song} 
+	\include{LearnToFly/song}
+\newpage
 
 \renewcommand{\thesongnum}{N}
 	\include{NeedleAndDamage/song} 
+\newpage
 
 \renewcommand{\thesongnum}{R}
+	\include{reality/song}
 	\include{riptide/song} 
 	\include{rockinginthefreeworld/song} 
 
 \renewcommand{\thesongnum}{S}
+	\include{sevennationsarmy/song}      
+	\include{ShouldIStay/song}      
 	\include{smellsliketeenspirit/song} 
 	\include{society/song} 
-	\include{soundofsilence/song_Am}     
-%		\include{soundofsilence/song_Em} 
+	\include{someonelikeyou/song} 
+	\include{soundofsilence/song_Am}
+	\include{Steady_as_she_goes/song} 
 %	\include{ShowMustGoOn/song}
+\newpage
 
 \renewcommand{\thesongnum}{T}
 	\include{teenagedirtbag/song} 
 	\include{troy/song}
 
 \renewcommand{\thesongnum}{W}
+	\include{wearethechampions/song} 
 	\include{wheredidyousleeplastnight/song} 
 	\include{wildrover/song}					
-%	\songcolumns{2} % wonderwall not yet prepared for 1 page
-		\include{wonderwall/song_X}    %\setcounter{songnum}{2}
-%		\include{wonderwall/song} 
-%	\songcolumns{1}
-%	\include{wearethechampions/song}
+	\include{wonderwall/song_X}    
+\newpage
 
 \renewcommand{\thesongnum}{Y}
 	\include{you_dont_know/song}
+\newpage
 
 \renewcommand{\thesongnum}{Z}
 	\include{zombie/song} 
+\newpage
 
 
 
@@ -226,6 +255,7 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 		\beginscripture{(Theo Maassen)}
 		Het enige dat wij nog echt tekortkomen is schaarste 
 		\endscripture	
+		
 
 	
 % idee\"en:
@@ -233,13 +263,32 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 %   Counting Start ; One Republic
 %   Losing my religion ; REM
 %   how you remind me : akkoorden erbij
-%   riptide : akkoorden erbij
 % smells like ...
 %  Jolene 
 %   Iris ; Goo Goo Dolls
 %   Kryptonite ; 3DD
 %   And I love her ; beatles 
+% The man who sold the world, Bowie
 
+
+% Natasja band / Bitter Sweet  (apr2017)
+%	Jolene , Dolly Parton
+%	Rockstar, Nickalback
+%	Losing my religion, REM
+%	Every breath you take, Police
+%	Dust in the Wind, Kansas
+%	All the small things, blink182
+%	Kiss me, Sixpence none the richer 
+%	Young volcanoes, Fall out boy
+%	Demons, Imagine dragons
+%	Gives you hell, all american rejects
+%	Fat lip, sum41 
+%	Call your friends, zebrahead 
+%	Mad world, Gary Jules
+%	With me, sum 41
+%	This town, Niall Horan 
+%	Weak, Skunk 
+%	Don't look back in anger, Oasis 
 
 
 
