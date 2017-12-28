@@ -19,6 +19,11 @@
 %\usepackage{xpatch}
 
 \usepackage{tikz}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+]{doclicense}
 \usetikzlibrary{decorations.text}
 
 
@@ -69,9 +74,9 @@
 \pagenumbering{gobble}
 
 % ------------------- Title and Author -----------------------------
-\title{AMeeSpeel KuylKampVuur Songbook 2016}
+\title{Songbook 2017}
 
-\author{gathered by Grobozeak-KKVO}
+\author{verzameld met/door KuylKamp, Bokthor, Scouting Livingstone, Natasja en Coen}
 \newindex{titleidx}{titleidx}
 \indexsongsas{titleidx}{\thepage}
 %\newauthorindex{authidx}{authidx}
@@ -81,63 +86,67 @@
 \begin{document}
 %\songcolumns{2}
 
-\maketitle 
+  \maketitle 
+  
 
 %\qrcode[hyperlink]{https://www.kuylkamp.nl}
 
 %\parbox{0.70\linewidth}{\includegraphics[width=0.2\linewidth]{KK/KuylKamp_vierkantje_logo}}\hfill
 
  
-\begin{wrapfigure}{l}{0.20\textwidth}
-\qrcode[hyperlink]{https://github.com/coentjo/songbooks/releases}
+%\begin{wrapfigure}{l}{0.20\textwidth}
+%\qrcode[hyperlink]{https://github.com/coentjo/songbooks/releases}
 
 %\url{https://github.com/coentjo/songbooks/releases}. 
-\end{wrapfigure}
+%\end{wrapfigure}
 
 
-Bij een aantal nummers is aangegeven op welke positie de capo moet staan om met het origineel mee te kunnen spelen (als je het bijvoorbeeld op youtube opzoekt). Op het KuylKamp zullen we zoveel mogelijk \emph{zonder} spelen.  
+%Bij een aantal nummers is aangegeven op welke positie de capo moet staan om met het origineel mee te kunnen spelen (als je het bijvoorbeeld op youtube opzoekt). 
+%Dit songbook is ook te vinden op internet, verstopt achter de URL \url{https://github.com/coentjo/songbooks/releases}. 
 
-Dit songbook is ook te vinden op internet, verstopt achter de URL \url{https://github.com/coentjo/songbooks/releases}. 
-
-Op die internetpagina staan ook een aantal links naar opnamen van een aantal nummers zoals ze ook in de map staan.  
+%Op die internetpagina staan ook een aantal links naar opnamen van een aantal nummers zoals ze ook in de map staan.  
 Natuurlijk heb je een gestemde gitaar nodig. Als je geen stemmer hebt kun je je mobiel gebruiken met een app: Zoek in de app store van je keuze op `\emph{Guitar Tuner}'. Zelf heb ik goeie ervaringen met `PitchLab Guitar Tuner' onder Android. 
 
-Na het KuylKamp ben ik weer wat nummers aan het toevoegen, niet allemaal geschikt als kampvuur, maar dat zoeken we volgend jaar vlak voor het KuylKamp wel weer uit... Check af en toe eens voor updates... 
+% Met dank aan (onder andere) het KuylKamp, de schrijvers van alle liederen, \url{https://nl.scoutwiki.org/Lijst\_van\_scoutingliedjes}
 
 Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com} 
 
-\includegraphics[width=0.2\linewidth]{KK/guitar-image-7} 
+%\includegraphics[width=0.2\linewidth]{KK/guitar-image-7} 
 
 
-\begin{wrapfigure}{l}{0.25\textwidth}
-\includegraphics[width=0.3\linewidth]{KK/KuylKamp_vierkantje_logo} 
-\end{wrapfigure}
+%\begin{wrapfigure}{l}{0.25\textwidth}
+%\includegraphics[width=0.3\linewidth]{KK/KuylKamp_vierkantje_logo} 
+%\end{wrapfigure}
 
 
-\begin{tikzpicture}[mypostaction/.style 2 args={
-                         decoration={
-                              text align={
-                                    left indent=#1},
-                                    text along path, 
-                                    text={#2}
-                                    },
-                           decorate
-                        }
-                    ]
-  \coordinate (specRoot) at (-10,0);
-  \coordinate (testTreeRoot) at (0,0);
-  \draw[-latex, blue!20!white, line width=5ex]  (specRoot) to[in=135,out=45] (testTreeRoot);
-
-  \path [postaction={mypostaction={1cm}{Sla snel de bladzijde om}},
-         postaction={mypostaction={1cm}{en begin met spelen!},
-         /pgf/decoration/raise=-3mm}]
-    (specRoot) to [in=120,out=45] (testTreeRoot);
-\end{tikzpicture}
+%\begin{tikzpicture}[mypostaction/.style 2 args={
+  %                       decoration={
+    %                          text align={
+      %                              left indent=#1},
+        %                            text along path, 
+          %                          text={#2}
+            %                        },
+              %             decorate
+                %        }
+                  %  ]
+  %\coordinate (specRoot) at (-10,0);
+  %\coordinate (testTreeRoot) at (0,0);
+ % \draw[-latex, blue!20!white, line width=5ex]  (specRoot) to[in=135,out=45] (testTreeRoot);
+%
+ % \path [postaction={mypostaction={1cm}{Sla snel de bladzijde om}},
+  %       postaction={mypostaction={1cm}{en begin met spelen!},
+   %      /pgf/decoration/raise=-3mm}]
+    %(specRoot) to [in=120,out=45] (testTreeRoot);
+%\end{tikzpicture}
 
 %\url{https://github.com/coentjo/songbooks/releases/download/v0.1/Amy_Green.Day.mp3}
 %\qrcode{https://github.com/coentjo/songbooks/releases/download/v0.1/Amy_Green.Day.mp3}
 
-\showindex[1]{Title index}{titleidx}
+
+
+% ------------------------ uncomment this for an index: ------------------------                                       <----
+%  \showindex[1]{Title index}{titleidx}
+% ------------------------ uncomment this for an index -------------------------
 
 
 %\tableofcontents 
@@ -157,9 +166,19 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 \begin{songs}{titleidx} %,authidx}
 \songcolumns{1}
 
+
+\renewcommand{\thesongnum}{1}
+	\include{1kopjekoffie/song}
 	
 \renewcommand{\thesongnum}{A}
+	\include{abc/song} 
+
+	\songcolumns{2}
+	\include{achhoezielig/song} 
+	\songcolumns{1}
+	
 	\include{actnaturally/song} 
+	\include{advocaatje/song} 
 	\include{AllOverYou/song}
 	\include{allrightnowFree/song}
 	\include{amy/song} 
@@ -168,16 +187,40 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 
 	
 \renewcommand{\thesongnum}{B}
+	\include{bambilielied/song} 
+	\include{bananenlied/song} 
 	\include{BasketCase/song} 
+	\include{becausethenight/song} 
 	\include{BigMe/song} 
 	\include{blue/song} 
+	\include{boerwolnoarziennoaber/song}
+	\include{brandinmokum/song}
+	\include{breakfastattiffanys/song}
 	\include{browneyedgirl/song} 
 	\include{buddyholly/song} 				% TODO chords 
+	\include{byebyelove/song} 				% TODO chords 
 		
-\renewcommand{\thesongnum}{C} 
+\renewcommand{\thesongnum}{C}
+	\include{callmethebreeze/song}  
+	\include{clementineEN/song} 
+	\include{clementineNL/song} 
 	\include{comeasyouare/song} 
 	\include{ComeOutAndPlay/song} 
 	\include{Country_Roads/song}					
+	\include{cowboybillyboem/song}					
+
+\renewcommand{\thesongnum}{D} 
+	\songcolumns{2}
+	\include{daarbovenopdeberg/song} 
+	\include{doenooitzomaargemeen/song} 
+	\include{dondertbliksemt/song} 
+	\include{dreijapanesen/song} 
+	\include{drieschuintamboers/song} 
+	\songcolumns{1}
+
+\renewcommand{\thesongnum}{F} 
+	\include{faria/song} 
+	\include{fouragemeesterstent/song} 
 
 \renewcommand{\thesongnum}{H}
 	\include{halleluja/song} 
@@ -186,64 +229,111 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 	\include{hittheroadjack/song} 				 	% TODO chords 
 	\include{holdon/song} 				 	% TODO chords 
 	\include{holiday/song} 				 	% TODO chords 
+	\include{hoofdschouders/song}  
 	\include{houseoftherisingsun/song}  
 	\include{howyouremindme/song} 
 %	\include{holiday/song} 
 
 \renewcommand{\thesongnum}{I}
 	\include{IAlone/song}
+	\include{ifyourehappy/song}
 	\include{iloverocknroll/song}
 	\include{irisgoogoodolls/song}
 	\include{irishrover/song} 				% TODO tussenspel uitzoeken !!
 
 \renewcommand{\thesongnum}{J}
 	\include{jerseygirl/song}			 	% TODO chords 
-	\include{jongeondernemer/song}	 	% TODO chords 
-		
+	\include{jongeondernemer/song}	 	
+	\include{jollygoodfellow/song}	 	
+	\include{julia/song}	 	
+	
+\renewcommand{\thesongnum}{K}
+	\songcolumns{2}
+	\include{kadullekes/song} 
+	\include{katkomweer/song} 
+	\include{komtvrienden/song} 
+	\songcolumns{1}
+	\include{kumbaya/song} 
+
 \renewcommand{\thesongnum}{L}
+	\songcolumns{2}
+	\include{laatonsblijvenzwerven/song} 
+	\include{landvanmaasenmaal/song} 
 	\include{langzalzeleven/song} 
+	\songcolumns{1}
 	\include{LearnToFly/song}
 \newpage
 
+\renewcommand{\thesongnum}{M}
+	\include{machtigstekoning/song} 
+	\songcolumns{2}
+	\include{mosselman/song} 
+	\include{mosselman2/song} 
+	\songcolumns{1}
+
 \renewcommand{\thesongnum}{N}
+	\include{nacht/song} 
 	\include{NeedleAndDamage/song} 
-\newpage
+	\include{nederlandseamerikaan/song} 
+
+\renewcommand{\thesongnum}{O}
+	\include{aandeoever/song} 
+	\include{oldmacdonald/song} 
+
+\renewcommand{\thesongnum}{P}
+	\include{pleecomplex/song} 
 
 \renewcommand{\thesongnum}{R}
 	\include{reality/song}
+%\songcolumns{2}
+	\include{rebelyell/song} 
+%\songcolumns{1}
+	\include{restless/song}
+	\include{rhiannon/song}
 	\include{riptide/song} 
+	\include{riverthe/song} 
+	\include{rockinallovertheworld/song} 
 	\include{rockinginthefreeworld/song} 
+	\include{rowrowrowyourboat/song} 
 
 \renewcommand{\thesongnum}{S}
+	\include{sariemarijs/song}      
 	\include{sevennationsarmy/song}      
 	\include{ShouldIStay/song}      
 	\include{smellsliketeenspirit/song} 
 	\include{society/song} 
 	\include{someonelikeyou/song} 
+	\include{sommigemensenvragen/song} 
 	\include{soundofsilence/song_Am}
 	\include{Steady_as_she_goes/song} 
+	\include{stilinmij/song} 
 %	\include{ShowMustGoOn/song}
 \newpage
 
 \renewcommand{\thesongnum}{T}
-	\include{teenagedirtbag/song} 
+	\include{tanteuitmarokko/song} 
+	\include{taptoe/song} 
 	\include{troy/song}
 
 \renewcommand{\thesongnum}{W}
 	\include{wearethechampions/song} 
+	\include{wagenvolgeladen/song} 
 	\include{wheredidyousleeplastnight/song} 
+	\include{wholeworld/song} 
 	\include{wildrover/song}					
 	\include{wonderwall/song_X}    
 \newpage
 
 \renewcommand{\thesongnum}{Y}
+	\include{yesterday/song}
 	\include{you_dont_know/song}
 \newpage
 
 \renewcommand{\thesongnum}{Z}
+	\include{zeppelin/song} 
 	\include{zombie/song} 
+	\include{zonzienzakken/song} 
 \newpage
-
 
 
 		\beginscripture{(had een oud Chinees spreekwoord kunnen zijn)}
@@ -257,21 +347,23 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 		\endscripture	
 		
 
+
+
 	
 % idee\"en:
+% heart shaped box (N en C ooit gespeeld: leuk!)
 %	Budapest George Ezra
 %   Counting Start ; One Republic
 %   Losing my religion ; REM
 %   how you remind me : akkoorden erbij
 % smells like ...
 %  Jolene 
-%   Iris ; Goo Goo Dolls
 %   Kryptonite ; 3DD
 %   And I love her ; beatles 
 % The man who sold the world, Bowie
 
 
-% Natasja band / Bitter Sweet  (apr2017)
+% N band: Bitter Sweet  (apr2017)
 %	Jolene , Dolly Parton
 %	Rockstar, Nickalback
 %	Losing my religion, REM
@@ -292,7 +384,7 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 
 
 
-%	\include{b/b}		
+%	\include{b/b}	
 \end{songs}
 
 
@@ -301,6 +393,10 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 
 %\bibliographystyle{plain-annote}
 %\bibliography{mybibliography}
+
+% --->  for Creative Commons License (is this the right one?)     \doclicenseThis
+Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com} 
+
 
 
 \end{document}
