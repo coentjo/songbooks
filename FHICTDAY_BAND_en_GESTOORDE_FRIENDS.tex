@@ -1,0 +1,240 @@
+\documentclass[a4,openany,portrait,tikz]{article}
+%\documentclass[a4,openany,landscape,tikz]{article}
+%\documentclass[11pt,a5,landscape,openany]{article}
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage[chorded]{songs}
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+%\usepackage{fancyhdr}
+%\usepackage{abc}
+%\usepackage{lilypond}
+%\usepackage[parfill]{parskip}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{qrcode}
+%\usepackage{amssymb}
+%\usepackage{epstopdf}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+%\usepackage{xpatch}
+
+\usepackage{tikz}
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={3.0},
+]{doclicense}
+\usetikzlibrary{decorations.text}
+
+
+% this was used when it was landscape:
+%\setlength{\topmargin}{-0.5cm}
+%\setlength{\headheight}{0cm}
+%\setlength{\headsep}{-0.5cm}
+%\setlength{\textheight}{18cm}
+%\setlength{\textwidth}{24cm}
+%\setlength{\oddsidemargin}{-0.5cm}
+%\setlength{\evensidemargin}{-0.5cm}
+%\setlength{\parindent}{0.25cm}
+
+\setlength{\topmargin}{-0.5cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{-0.5cm}
+\setlength{\textheight}{25cm}
+\setlength{\textwidth}{18cm}
+\setlength{\oddsidemargin}{0cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\parindent}{0.25cm}
+
+
+%never used? \setlength{\parskip}{0.25cm}
+
+
+\songpos{2}
+
+%\pagestyle{fancy}
+%\fancyhf{}
+%\lfoot{%
+%	\begin{minipage}{\textwidth}
+%	\parbox{0.46\linewidth}{Some text to go in the footer Some text to go in the footer}\hfill
+%	\parbox{0.70\linewidth}{\includegraphics[width=0.2\linewidth]{KK/KuylKamp_vierkantje_logo}}\hfill
+%	\parbox{0.60\linewidth}{\raggedleft\includegraphics[width=0.2\linewidth]{KK/KuylKamp_naam}}\hfill
+%	\parbox{0.02\linewidth}{\raggedleft \thepage}%
+%	\end{minipage}
+%}
+
+\renewcommand\printchord[1]{{\color{red!70!black}#1}}
+
+\renewcommand{\songchapter}{\subsection}
+\renewcommand{\songsection}{\subsection}
+
+\newcommand{\U}{\Uparrow}
+\newcommand{\D}{\Downarrow}
+
+\pagenumbering{gobble}
+
+% ------------------- Title and Author -----------------------------
+\title{Songbook 2017}
+
+\author{FHICT-Day 2018}
+\newindex{titleidx}{titleidx}
+\indexsongsas{titleidx}{\thepage}
+%\newauthorindex{authidx}{authidx}
+
+%\frontmatter
+
+\begin{document}
+%\songcolumns{2}
+
+  \maketitle
+
+
+%\qrcode[hyperlink]{https://www.kuylkamp.nl}
+
+%\parbox{0.70\linewidth}{\includegraphics[width=0.2\linewidth]{KK/KuylKamp_vierkantje_logo}}\hfill
+
+
+%\begin{wrapfigure}{l}{0.20\textwidth}
+%\qrcode[hyperlink]{https://github.com/coentjo/songbooks/releases}
+
+%\url{https://github.com/coentjo/songbooks/releases}.
+%\end{wrapfigure}
+
+
+%Bij een aantal nummers is aangegeven op welke positie de capo moet staan om met het origineel mee te kunnen spelen (als je het bijvoorbeeld op youtube opzoekt).
+%Dit songbook is ook te vinden op internet, verstopt achter de URL \url{https://github.com/coentjo/songbooks/releases}.
+
+%Op die internetpagina staan ook een aantal links naar opnamen van een aantal nummers zoals ze ook in de map staan.
+%Natuurlijk heb je een gestemde gitaar nodig. Als je geen stemmer hebt kun je je mobiel gebruiken met een app: Zoek in de app store van je keuze op `\emph{Guitar Tuner}'. Zelf heb ik goeie ervaringen met `PitchLab Guitar Tuner' onder Android.
+
+% Met dank aan (onder andere) het KuylKamp, de schrijvers van alle liederen, \url{https://nl.scoutwiki.org/Lijst\_van\_scoutingliedjes}
+
+Fouten, wijzigingen of andere tips? Mail ze door :   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com}
+
+%\includegraphics[width=0.2\linewidth]{KK/guitar-image-7}
+
+
+%\begin{wrapfigure}{l}{0.25\textwidth}
+%\includegraphics[width=0.3\linewidth]{KK/KuylKamp_vierkantje_logo}
+%\end{wrapfigure}
+
+
+%\begin{tikzpicture}[mypostaction/.style 2 args={
+  %                       decoration={
+    %                          text align={
+      %                              left indent=#1},
+        %                            text along path,
+          %                          text={#2}
+            %                        },
+              %             decorate
+                %        }
+                  %  ]
+  %\coordinate (specRoot) at (-10,0);
+  %\coordinate (testTreeRoot) at (0,0);
+ % \draw[-latex, blue!20!white, line width=5ex]  (specRoot) to[in=135,out=45] (testTreeRoot);
+%
+ % \path [postaction={mypostaction={1cm}{Sla snel de bladzijde om}},
+  %       postaction={mypostaction={1cm}{en begin met spelen!},
+   %      /pgf/decoration/raise=-3mm}]
+    %(specRoot) to [in=120,out=45] (testTreeRoot);
+%\end{tikzpicture}
+
+%\url{https://github.com/coentjo/songbooks/releases/download/v0.1/Amy_Green.Day.mp3}
+%\qrcode{https://github.com/coentjo/songbooks/releases/download/v0.1/Amy_Green.Day.mp3}
+
+
+
+% ------------------------ uncomment this for an index: ------------------------                                       <----
+%  \showindex[1]{Title index}{titleidx}
+% ------------------------ uncomment this for an index -------------------------
+
+
+%\tableofcontents
+%\showindex{Al hun liedjes}{titleidx}
+
+%\showindex[2]{Nummers}{titleidx}
+%\showindex[2]{artiesten}{authidx}
+
+
+%\begin{abc}[name=c-dur]
+%X: 1 % start of header
+%K: C % scale: C major
+%"Text"C4 G4 | (3FED c4 G2 |
+%\end{abc}
+\newpage
+
+\begin{songs}{titleidx} %,authidx}
+\songcolumns{1}
+
+%\renewcommand{\thesongnum}{F}
+  \include{blauw/song}
+  \include{cometogether/song}
+  \include{crosstowntraffic/song}
+  \include{dontletmedown/song}
+  \include{heartacheswerenickels/song}
+  \include{honkytonkwoman/song}
+  \include{hootchiecootchie/song}
+  \include{iedereenisvdwereld/song}
+  \include{letmeentertainyou/song}
+  \include{littlewing/song}
+  \include{saturdaynight/song}
+  \include{slither/song}
+  \include{superstition/song}
+  \include{walrusiamthe/song}
+  \include{warpigs/song}
+
+
+
+
+
+% idee\"en:
+% heart shaped box (N en C ooit gespeeld: leuk!)
+%	Budapest George Ezra
+%   Counting Start ; One Republic
+%   Losing my religion ; REM
+%   how you remind me : akkoorden erbij
+% smells like ...
+%  Jolene
+%   Kryptonite ; 3DD
+%   And I love her ; beatles
+% The man who sold the world, Bowie
+
+
+% N band: Bitter Sweet  (apr2017)
+%	Jolene , Dolly Parton
+%	Rockstar, Nickalback
+%	Losing my religion, REM
+%	Every breath you take, Police
+%	Dust in the Wind, Kansas
+%	All the small things, blink182
+%	Kiss me, Sixpence none the richer
+%	Young volcanoes, Fall out boy
+%	Demons, Imagine dragons
+%	Gives you hell, all american rejects
+%	Fat lip, sum41
+%	Call your friends, zebrahead
+%	Mad world, Gary Jules
+%	With me, sum 41
+%	This town, Niall Horan
+%	Weak, Skunk
+%	Don't look back in anger, Oasis
+
+
+
+%	\include{b/b}
+\end{songs}
+
+
+%\includegraphics[width=0.2\linewidth]{KK/guitar-image-7}
+
+
+%\bibliographystyle{plain-annote}
+%\bibliography{mybibliography}
+
+% --->  for Creative Commons License (is this the right one?)     \doclicenseThis
+%Fouten, wijzigingen of andere tips? mail ze:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com}
+
+
+
+\end{document}
+\end
