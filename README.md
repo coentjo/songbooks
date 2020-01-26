@@ -169,3 +169,5 @@ Losse songs:
 + [achhoezielig.pdf](achhoezielig.pdf)
 + [sariemarijs.pdf](sariemarijs.pdf)
 + [dondertbliksemt.pdf](dondertbliksemt.pdf)
++ [The Beach](beach.pdf)
++ [Slow Change](slowchange.pdf)
