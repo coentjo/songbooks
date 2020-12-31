@@ -1,30 +1,30 @@
-\documentclass[a4,openany,portrait,tikz]{article}
+\documentclass{article}
 %\documentclass[a4,openany,landscape,tikz]{article}
 %\documentclass[11pt,a5,landscape,openany]{article}
 \usepackage{xcolor}
-\usepackage{makeidx}
-\usepackage{geometry}
+%\usepackage{makeidx}
+%\usepackage{geometry}
 \usepackage[chorded]{songs}
 \usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
 %\usepackage{fancyhdr}
 %\usepackage{abc}
 %\usepackage{lilypond}
 %\usepackage[parfill]{parskip}
-\usepackage{graphicx}
-\usepackage{wrapfig}
-\usepackage{qrcode}
+%\usepackage{graphicx}
+%\usepackage{wrapfig}
+%\usepackage{qrcode}
 %\usepackage{amssymb}
 %\usepackage{epstopdf}
 %\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 %\usepackage{xpatch}
 
-\usepackage{tikz}
-\usepackage[
-    type={CC},
-    modifier={by-nc-sa},
-    version={3.0},
-]{doclicense}
-\usetikzlibrary{decorations.text}
+%\usepackage{tikz}
+%\usepackage[
+ %   type={CC},
+  %  modifier={by-nc-sa},
+%    version={3.0},
+%]{doclicense}
+%\usetikzlibrary{decorations.text}
 
 
 % this was used when it was landscape:
@@ -50,7 +50,7 @@
 %never used? \setlength{\parskip}{0.25cm}
 
 
-\songpos{2}
+%\songpos{2}
 
 %\pagestyle{fancy}
 %\fancyhf{}
@@ -71,14 +71,14 @@
 \newcommand{\U}{\Uparrow}
 \newcommand{\D}{\Downarrow}
 
-\pagenumbering{gobble}
+%\pagenumbering{gobble}
 
 % ------------------- Title and Author -----------------------------
-\title{Songbook 2019}
+%\title{Songbook 2019}
 
-\author{verzameld met/door KuylKamp, Bokthor, Scouting Livingstone, Natasja en Coen}
-\newindex{titleidx}{titleidx}
-\indexsongsas{titleidx}{\thepage}
+%\author{verzameld met/door KuylKamp, Bokthor, Scouting Livingstone, Natasja en Coen}
+%\newindex{titleidx}{titleidx}
+%\indexsongsas{titleidx}{\thepage}
 %\newauthorindex{authidx}{authidx}
 
 %\frontmatter
@@ -86,7 +86,7 @@
 \begin{document}
 %\songcolumns{2}
 
-  \maketitle
+%  \maketitle
 
 
 %\qrcode[hyperlink]{https://www.kuylkamp.nl}
@@ -104,12 +104,11 @@
 %Bij een aantal nummers is aangegeven op welke positie de capo moet staan om met het origineel mee te kunnen spelen (als je het bijvoorbeeld op youtube opzoekt).
 %Dit songbook is ook te vinden op internet, verstopt achter de URL \url{https://github.com/coentjo/songbooks/releases}.
 
-%Op die internetpagina staan ook een aantal links naar opnamen van een aantal nummers zoals ze ook in de map staan.
-Natuurlijk heb je een gestemde gitaar nodig. Als je geen stemmer hebt kun je je mobiel gebruiken met een app: Zoek in de app store van je keuze op `\emph{Guitar Tuner}'. Zelf heb ik goeie ervaringen met `PitchLab Guitar Tuner' onder Android.
+%Natuurlijk heb je een gestemde gitaar nodig. Als je geen stemmer hebt kun je je mobiel gebruiken met een app: Zoek in de app store van je keuze op `\emph{Guitar Tuner}'. Zelf heb ik goeie ervaringen met `PitchLab Guitar Tuner' onder Android.
 
 % Met dank aan (onder andere) het KuylKamp, de schrijvers van alle liederen, \url{https://nl.scoutwiki.org/Lijst\_van\_scoutingliedjes}
 
-Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com}
+%Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com}
 
 %\includegraphics[width=0.2\linewidth]{KK/guitar-image-7}
 
@@ -161,9 +160,11 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 %K: C % scale: C major
 %"Text"C4 G4 | (3FED c4 G2 |
 %\end{abc}
-\newpage
+%\newpage
 
-\begin{songs}{titleidx} %,authidx}
+%\begin{songs}{titleidx} %,authidx}
+\begin{songs} %,authidx}
+
 \songcolumns{1}
 
 %\renewcommand{\thesongnum}{F}
@@ -187,9 +188,9 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 	\include{alie/song}
 	\include{AllOverYou/song}
 	\include{allrightnowFree/song}
-  \include{alsdenachtverdwijnt/song}
-  \include{america/song}
-  \include{americantune/song}
+	\include{alsdenachtverdwijnt/song}
+	\include{america/song}
+	\include{americantune/song}
 	\include{amy/song}
 \newpage
 
@@ -358,7 +359,7 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 	\include{riverthe/song}
 	\include{rockinallovertheworld/song}
 	\include{rockinginthefreeworld/song}
-%	\include{rowrowrowyourboat/song}
+%\include{rowrowrowyourboat/song}
 
 \renewcommand{\thesongnum}{S}
 	\include{sabotage/song}
@@ -382,7 +383,6 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 	\include{superstition/song}
 
 
-\newpage
 
 \renewcommand{\thesongnum}{T}
 	\include{tanteuitmarokko/song}
@@ -411,7 +411,6 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 	\include{wonderwall/song}
 	\include{wonderwall/song_X}
 
-\newpage
 
 \renewcommand{\thesongnum}{Y}
 	\include{yesterday/song}
@@ -423,7 +422,7 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 	\include{zeppelin/song}
 	\include{zombie/song}
 	\include{zonzienzakken/song}
-\newpage
+
 
 %\chordsoff
 %\chordson
@@ -474,9 +473,10 @@ Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coent
 
 
 % --->  for Creative Commons License (is this the right one?)     \doclicenseThis
-Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com}
+%Fouten, wijzigingen of andere tips? Geef ze door via email:   \href{mailto:coentjo@gmail.com}{coentjo@gmail.com}
 
 
 
 \end{document}
+
 \end
