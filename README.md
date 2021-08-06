@@ -3,8 +3,8 @@
 
 ## Alphabet
 Starting with
-+ ['S'](songs_s)
-+ ['W'](songs_w)
++ ['S'](songs_s.pdf)
++ ['W'](songs_w.pdf)
 
 
 ## The Rest (Loose songs):
