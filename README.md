@@ -1,6 +1,12 @@
 # songbooks
 
 
+## Alphabet
+Starting with
++ ['S'](songs_s)
++ ['W'](songs_w)
+
+
 Find this / Vind dit:
 
 + [on Github pages](https://coentjo.github.io/songbooks): makkelijkst in gebruik
@@ -13,6 +19,8 @@ I use LiveTex with  \usepackage+ [chorded]{songs}
 
 
 [AMeeSpeel_KuylKampVuur.pdf : een hele verzameling](AMeeSpeel_KuylKampVuur.pdf)
+
+
 
 
 Losse songs:
