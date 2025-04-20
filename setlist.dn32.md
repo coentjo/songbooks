@@ -5,4 +5,4 @@
 - By the way - Peppers [youtube](https://www.youtube.com/watch?v=JDHoc9qzC5I)
 - Human - Rag'n'BOne Man [youtube](https://coentjo.github.io/songbooks/setlist.dn32)
 - Silver Start - Four Seasons [text](https://genius.com/The-four-seasons-silver-star-lyrics) [chords](https://tabs.ultimate-guitar.com/tab/the-four-seasons/silver-star-chords-3240521)
-- Superstition - Stevie Wonder [pdf](https://coentjo.github.io/songbooks/Superstition.pdf)
+- Superstition - Stevie Wonder [pdf](https://coentjo.github.io/songbooks/superstition.pdf)
