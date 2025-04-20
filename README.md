@@ -1,14 +1,14 @@
 # songbooks
 
-
 ## Alphabet
+
 Starting with
+
 + ['F'](songs_f.pdf)
 + ['S'](songs_s.pdf)
 + ['W'](songs_w.pdf)
 
-
-## The Rest (Loose songs):
+## The Rest (Loose songs)
 
 + [1 kopje koffie](1kopjekoffie.pdf)
 
@@ -108,11 +108,6 @@ Starting with
 
 + [zombie.pdf](zombie.pdf)
 
-
-
-
-
-
 + [amy.pdf](amy.pdf)
 + [AllOverYou.pdf](AllOverYou.pdf)
 + [aandeoever](aandeoever.pdf)
@@ -149,9 +144,8 @@ Starting with
 + [truecolors.pdf](truecolors.pdf)
 + [teenagedirtbag](teenagedirtbag.pdf)
 + [You never walk alone](you_never_walk_alone.pdf)
+
 ---
-
-
 
 ## Where to find this
 
@@ -160,3 +154,9 @@ Starting with
 
 This project I created because I myself collect lyrics and chords for songs I play. When playing with other people it's convenient to have a way of re-using written down songs.
 I use LiveTex with  \usepackage+ [chorded]{songs}
+
+---
+
+Setlist:
+
++ [setlist DN32](https://coentjo.github.io/songbooks/setlist.dn32)
