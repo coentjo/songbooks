@@ -15,10 +15,8 @@
 - Rollercoaster - Danny Vera
 - I'm still here - Treasure Planet
 - Land of Confusion - Genesis
-- Big me - Foo Fighters
-BigMe.pdf
-- Basket Case - Green Day
-BasketCase.pdf
+- Big me - Foo Fighters [pdf](https://coentjo.github.io/songbooks/BigMe.pdf)
+- Basket Case - Green Day [pdf](https://coentjo.github.io/songbooks/BasketCase.pdf)
 - Killing in the name of - Rage Against the Machine
 - Alive and kicking - Simple Minds
 
