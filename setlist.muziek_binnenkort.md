@@ -9,8 +9,6 @@
 
 ## Wishlist
 
- [pdf](<https://coentjo.github.io/songbooks/>
-
 - Knights of Cydonia - Muse
 - Rollercoaster - Danny Vera
 - I'm still here - Treasure Planet
