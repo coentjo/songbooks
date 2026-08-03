@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>musiec</title>
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --fg: #f2f0ea;
+      --muted: #a8a49a;
+      --accent: #e8c547;
+      --link: #7ec8e3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      background: radial-gradient(ellipse at top, #2a2a28 0%, var(--bg) 55%);
+      color: var(--fg);
+      min-height: 100vh;
+      line-height: 1.45;
+      padding: 2rem 1.25rem 3rem;
+    }
+    main {
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+    }
+    .tagline {
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+      font-size: 1rem;
+    }
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: song;
+    }
+    li {
+      counter-increment: song;
+      padding: 1rem 0;
+      border-top: 1px solid #333;
+    }
+    li:last-child { border-bottom: 1px solid #333; }
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .title::before {
+      content: counter(song) ". ";
+      color: var(--accent);
+    }
+    .artist {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0.15rem 0 0.55rem;
+    }
+    .links a {
+      color: var(--link);
+      margin-right: 0.9rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .links a:hover { text-decoration: underline; }
+    .soon {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.95rem;
+    }
+    footer {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--link); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>musiec</h1>
+    <p class="tagline">Speellijst — tekst + akkoorden (PDF). Deel deze pagina met je band.</p>
+
+    <ol>
+      <li>
+        <div class="title">Steady as she goes</div>
+        <div class="artist">The Raconteurs</div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/Steady_as_she_goes.pdf">pdf</a>
+          <a href="https://www.youtube.com/watch?v=DXAidGQUuns">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Learn to fly</div>
+        <div class="artist">Foo Fighters</div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/LearnToFly.pdf">pdf</a>
+          <a href="https://www.youtube.com/watch?v=1VQ_3sBZEm0">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Country Roads</div>
+        <div class="artist">John Denver</div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/Country_Roads.pdf">pdf</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Going to the run</div>
+        <div class="artist">Golden Earring</div>
+        <div class="soon">pdf volgt nog</div>
+      </li>
+      <li>
+        <div class="title">Halleluja (in F)</div>
+        <div class="artist">Leonard Cohen</div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/halleluja_in_F.pdf">pdf</a>
+          <a href="https://coentjo.github.io/songbooks/halleluja.pdf">pdf (origineel in C)</a>
+        </div>
+      </li>
+    </ol>
+
+    <footer>
+      Songbooks:
+      <a href="https://coentjo.github.io/songbooks/">coentjo.github.io/songbooks</a>
+    </footer>
+  </main>
+</body>
+</html>
