@@ -7,8 +7,9 @@ Online basis: https://coentjo.github.io/songbooks/
 ## Deel-URL voor muzikanten
 
 - **musiec:** https://coentjo.github.io/songbooks/musiec.html
+- **hastico:** https://coentjo.github.io/songbooks/hastico.html (Ha · Ti · St · Co jam)
 
-(Pagina: `musiec.html` — lijst met PDF-links.)
+(Pagina: `musiec.html` / `hastico.html` — lijst met PDF/youtube-links.)
 
 ## Status
 

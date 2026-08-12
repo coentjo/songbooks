@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hastico</title>
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --fg: #f2f0ea;
+      --muted: #a8a49a;
+      --accent: #e8c547;
+      --link: #7ec8e3;
+      --chip: #3a3834;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Avenir Next", "Segoe UI", sans-serif;
+      background: radial-gradient(ellipse at top, #2a2a28 0%, var(--bg) 55%);
+      color: var(--fg);
+      min-height: 100vh;
+      line-height: 1.45;
+      padding: 2rem 1.25rem 3rem;
+    }
+    main {
+      max-width: 36rem;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2.4rem;
+      letter-spacing: 0.04em;
+      margin: 0 0 0.25rem;
+      font-weight: 700;
+    }
+    .tagline {
+      color: var(--muted);
+      margin: 0 0 0.35rem;
+      font-size: 1rem;
+    }
+    .who {
+      color: var(--muted);
+      margin: 0 0 1.75rem;
+      font-size: 0.9rem;
+    }
+    h2 {
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 2rem 0 0.35rem;
+      font-weight: 600;
+    }
+    .section-note {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: 0 0 0.5rem;
+    }
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: song;
+    }
+    li {
+      counter-increment: song;
+      padding: 1rem 0;
+      border-top: 1px solid #333;
+    }
+    li:last-child { border-bottom: 1px solid #333; }
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .title::before {
+      content: counter(song) ". ";
+      color: var(--accent);
+    }
+    .artist {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0.15rem 0 0.4rem;
+    }
+    .by {
+      display: inline-block;
+      background: var(--chip);
+      color: var(--fg);
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      padding: 0.15rem 0.45rem;
+      border-radius: 0.25rem;
+      margin: 0 0 0.45rem;
+    }
+    .links a {
+      color: var(--link);
+      margin-right: 0.9rem;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .links a:hover { text-decoration: underline; }
+    .note {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-top: 0.35rem;
+    }
+    footer {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--link); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>hastico</h1>
+    <p class="tagline">Ha · Ti · St · Co — jam index</p>
+    <p class="who">Crush-trio + Co. Eenmalig? Misschien niet. <em>Come together…</em></p>
+
+    <h2>St</h2>
+    <ol>
+      <li>
+        <div class="title">See Me Now</div>
+        <div class="artist">Lø Spirit</div>
+        <div class="by">St</div>
+        <div class="links">
+          <a href="https://youtu.be/dMmxdvEIMz0">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Three Kobolds in a Trenchcoat</div>
+        <div class="artist">Chase Noseworthy</div>
+        <div class="by">St</div>
+        <div class="links">
+          <a href="https://youtu.be/QsLN542nvGg">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Ghosts</div>
+        <div class="artist">Rag'n'Bone Man</div>
+        <div class="by">St</div>
+        <div class="links">
+          <a href="https://youtu.be/t9yRH7-4lz8">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">What Do You Believe In?</div>
+        <div class="artist">Rag'n'Bone Man</div>
+        <div class="by">St</div>
+        <div class="links">
+          <a href="https://youtu.be/L4C2tF4YzFU">youtube</a>
+        </div>
+      </li>
+    </ol>
+
+    <h2>Co</h2>
+    <ol>
+      <li>
+        <div class="title">Abracadabra</div>
+        <div class="artist">Steve Miller Band</div>
+        <div class="by">Co</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=tY8B0uQpwZs">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Demasiado Corazón</div>
+        <div class="artist">Mink DeVille</div>
+        <div class="by">Co</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=XA9Zy2t0VHk">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Fields of Gold</div>
+        <div class="artist">Sting</div>
+        <div class="by">Co</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=KLVq0IAzh1A">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Friday I'm in Love</div>
+        <div class="artist">The Cure</div>
+        <div class="by">Co</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=mGgMZpGYiy8">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">One Way</div>
+        <div class="artist">The Levellers</div>
+        <div class="by">Co</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=u0S8RNkL5Wg">youtube</a>
+        </div>
+        <div class="note">There's only one way of life… and that's your own</div>
+      </li>
+      <li>
+        <div class="title">Walk Walk</div>
+        <div class="artist">Sylvie Kreusch</div>
+        <div class="by">Co</div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/Walk_walk.pdf">pdf</a>
+          <a href="https://www.youtube.com/watch?v=h388IMquh6I">youtube</a>
+        </div>
+      </li>
+    </ol>
+
+    <h2>Ti</h2>
+    <ol>
+      <li>
+        <div class="title">Friday on My Mind</div>
+        <div class="artist">The Easybeats</div>
+        <div class="by">Ti</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=dnqxbdnzlhw">youtube</a>
+        </div>
+        <div class="note">Ti kent de Bowie-cover; origineel Easybeats</div>
+      </li>
+    </ol>
+
+    <h2>Ha</h2>
+    <ol>
+      <li>
+        <div class="title">There There</div>
+        <div class="artist">Radiohead</div>
+        <div class="by">Ha</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=7AQSLozK7aA">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Gypsy Woman</div>
+        <div class="artist">Crystal Waters</div>
+        <div class="by">Ha</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=_KztNIg4cvE">youtube</a>
+        </div>
+      </li>
+    </ol>
+
+    <h2>Eerder gedaan</h2>
+    <p class="section-note">Al gespeeld — handig als encore / warm-up.</p>
+    <ol>
+      <li>
+        <div class="title">Dance The Night</div>
+        <div class="artist">Dua Lipa</div>
+        <div class="by">eerder</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=OiC1rgCPmUQ">youtube</a>
+        </div>
+        <div class="note">Niet te verwarren met Van Halen — Dance the Night Away</div>
+      </li>
+      <li>
+        <div class="title">Human</div>
+        <div class="artist">Rag'n'Bone Man</div>
+        <div class="by">eerder</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=L3wKzyIN1yk">youtube</a>
+        </div>
+      </li>
+      <li>
+        <div class="title">Lágrimas Negras</div>
+        <div class="artist">Celia Cruz</div>
+        <div class="by">eerder</div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=eFq8njahXdI">youtube</a>
+        </div>
+      </li>
+    </ol>
+
+    <footer>
+      Songbooks:
+      <a href="https://coentjo.github.io/songbooks/">coentjo.github.io/songbooks</a>
+      · ook
+      <a href="https://coentjo.github.io/songbooks/musiec.html">musiec</a>
+    </footer>
+  </main>
+</body>
+</html>
