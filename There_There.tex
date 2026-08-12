@@ -1,0 +1,35 @@
+\documentclass[11pt,a4,openany]{article}
+\usepackage{xcolor}
+\usepackage{makeidx}
+\usepackage{geometry}
+\usepackage[chorded]{songs}
+
+\usepackage[colorlinks=true, pdfstartview=FitV, linkcolor=blue,
+            citecolor=blue, urlcolor=blue]{hyperref}
+
+\setlength{\topmargin}{-1.0cm}
+\setlength{\headheight}{0cm}
+\setlength{\headsep}{-0.5cm}
+\setlength{\textheight}{26.5cm}
+\setlength{\textwidth}{18.5cm}
+\setlength{\oddsidemargin}{-0.25cm}
+\setlength{\evensidemargin}{-0.25cm}
+\setlength{\parindent}{0.25cm}
+
+\renewcommand\printchord[1]{{\color{red!70!black}#1}}
+
+\newcommand{\U}{\Uparrow}
+\newcommand{\D}{\Downarrow}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\begin{songs}{}
+
+	\songcolumns{1}
+	\renewcommand{\thesongnum}{T}
+	\include{There_There/song}
+
+\end{songs}
+\end{document}
+\end
