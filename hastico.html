@@ -12,6 +12,7 @@
       --accent: #e8c547;
       --link: #7ec8e3;
       --chip: #3a3834;
+      --line: #333;
     }
     * { box-sizing: border-box; }
     body {
@@ -24,7 +25,7 @@
       padding: 2rem 1.25rem 3rem;
     }
     main {
-      max-width: 36rem;
+      max-width: 48rem;
       margin: 0 auto;
     }
     h1 {
@@ -44,7 +45,7 @@
       font-size: 0.9rem;
     }
     h2 {
-      font-size: 1.05rem;
+      font-size: 1.15rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--accent);
@@ -54,56 +55,103 @@
     .section-note {
       color: var(--muted);
       font-size: 0.9rem;
-      margin: 0 0 0.5rem;
+      margin: 0 0 0.75rem;
     }
-    ol {
+
+    /* Shortlist */
+    .shortlist {
       list-style: none;
       padding: 0;
       margin: 0;
-      counter-reset: song;
+      counter-reset: short;
+      border: 1px solid var(--line);
+      border-radius: 0.4rem;
+      overflow: hidden;
     }
-    li {
-      counter-increment: song;
-      padding: 1rem 0;
-      border-top: 1px solid #333;
+    .shortlist li {
+      counter-increment: short;
+      display: grid;
+      grid-template-columns: 2rem 1fr auto;
+      gap: 0.5rem;
+      align-items: baseline;
+      padding: 0.75rem 1rem;
+      border-top: 1px solid var(--line);
     }
-    li:last-child { border-bottom: 1px solid #333; }
-    .title {
-      font-size: 1.2rem;
+    .shortlist li:first-child { border-top: 0; }
+    .shortlist li::before {
+      content: counter(short) ".";
+      color: var(--accent);
       font-weight: 600;
     }
-    .title::before {
-      content: counter(song) ". ";
-      color: var(--accent);
-    }
-    .artist {
+    .shortlist .empty {
       color: var(--muted);
-      font-size: 0.95rem;
-      margin: 0.15rem 0 0.4rem;
+      font-style: italic;
+      grid-column: 2 / -1;
     }
-    .by {
+    .shortlist .title { font-weight: 600; }
+    .shortlist .artist { color: var(--muted); font-size: 0.9rem; }
+    .shortlist .links a {
+      color: var(--link);
+      text-decoration: none;
+      font-size: 0.9rem;
+      margin-left: 0.65rem;
+    }
+    .shortlist .links a:hover { text-decoration: underline; }
+
+    /* Gallore table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 0.5rem;
+      border: 1px solid var(--line);
+      border-radius: 0.4rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      min-width: 36rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.55rem 0.7rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th {
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: #222;
+    }
+    tr:last-child td { border-bottom: 0; }
+    tr:hover td { background: rgba(255,255,255,0.03); }
+    .num { color: var(--accent); font-weight: 600; width: 2rem; }
+    .who-cell {
       display: inline-block;
       background: var(--chip);
-      color: var(--fg);
-      font-size: 0.75rem;
-      letter-spacing: 0.04em;
-      padding: 0.15rem 0.45rem;
+      padding: 0.1rem 0.4rem;
       border-radius: 0.25rem;
-      margin: 0 0 0.45rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
     }
+    .song-title { font-weight: 600; }
+    .artist-cell { color: var(--muted); }
     .links a {
       color: var(--link);
-      margin-right: 0.9rem;
       text-decoration: none;
-      font-size: 0.95rem;
+      margin-right: 0.65rem;
+      white-space: nowrap;
     }
     .links a:hover { text-decoration: underline; }
     .note {
       color: var(--muted);
       font-style: italic;
-      font-size: 0.9rem;
-      margin-top: 0.35rem;
+      font-size: 0.85rem;
     }
+
     footer {
       margin-top: 2rem;
       color: var(--muted);
@@ -118,164 +166,199 @@
     <p class="tagline">Ha · Ti · St · Co — jam index</p>
     <p class="who">Crush-trio + Co. Eenmalig? Misschien niet. <em>Come together…</em></p>
 
-    <h2>St</h2>
-    <ol>
-      <li>
-        <div class="title">See Me Now</div>
-        <div class="artist">Lø Spirit</div>
-        <div class="by">St</div>
-        <div class="links">
-          <a href="https://youtu.be/dMmxdvEIMz0">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Three Kobolds in a Trenchcoat</div>
-        <div class="artist">Chase Noseworthy</div>
-        <div class="by">St</div>
-        <div class="links">
-          <a href="https://youtu.be/QsLN542nvGg">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Ghosts</div>
-        <div class="artist">Rag'n'Bone Man</div>
-        <div class="by">St</div>
-        <div class="links">
-          <a href="https://youtu.be/t9yRH7-4lz8">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">What Do You Believe In?</div>
-        <div class="artist">Rag'n'Bone Man</div>
-        <div class="by">St</div>
-        <div class="links">
-          <a href="https://youtu.be/L4C2tF4YzFU">youtube</a>
-        </div>
-      </li>
+    <h2>Shortlist</h2>
+    <p class="section-note">Wat we écht gaan spelen — kies uit Gallore hieronder.</p>
+    <ol class="shortlist">
+      <li><span class="empty">nog leeg…</span></li>
+      <li><span class="empty">nog leeg…</span></li>
+      <li><span class="empty">nog leeg…</span></li>
+      <li><span class="empty">nog leeg…</span></li>
     </ol>
 
-    <h2>Co</h2>
-    <ol>
-      <li>
-        <div class="title">Abracadabra</div>
-        <div class="artist">Steve Miller Band</div>
-        <div class="by">Co</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/Abracadabra.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=tY8B0uQpwZs">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Demasiado Corazón</div>
-        <div class="artist">Mink DeVille</div>
-        <div class="by">Co</div>
-        <div class="links">
-          <a href="https://www.youtube.com/watch?v=XA9Zy2t0VHk">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Fields of Gold</div>
-        <div class="artist">Sting</div>
-        <div class="by">Co</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/Fields_of_Gold.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=KLVq0IAzh1A">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Friday I'm in Love</div>
-        <div class="artist">The Cure</div>
-        <div class="by">Co</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/Friday_Im_in_Love.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=mGgMZpGYiy8">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">One Way</div>
-        <div class="artist">The Levellers</div>
-        <div class="by">Co</div>
-        <div class="links">
-          <a href="https://www.youtube.com/watch?v=u0S8RNkL5Wg">youtube</a>
-        </div>
-        <div class="note">There's only one way of life… and that's your own</div>
-      </li>
-      <li>
-        <div class="title">Walk Walk</div>
-        <div class="artist">Sylvie Kreusch</div>
-        <div class="by">Co</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/Walk_walk.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=h388IMquh6I">youtube</a>
-        </div>
-      </li>
-    </ol>
+    <h2>Gallore</h2>
+    <p class="section-note">Alle voorstellen — overzicht in één oogopslag.</p>
 
-    <h2>Ti</h2>
-    <ol>
-      <li>
-        <div class="title">Friday on My Mind</div>
-        <div class="artist">The Easybeats</div>
-        <div class="by">Ti</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/Friday_on_My_Mind.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=dnqxbdnzlhw">youtube</a>
-        </div>
-        <div class="note">Ti kent de Bowie-cover; origineel Easybeats</div>
-      </li>
-    </ol>
-
-    <h2>Ha</h2>
-    <ol>
-      <li>
-        <div class="title">There There</div>
-        <div class="artist">Radiohead</div>
-        <div class="by">Ha</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/There_There.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=7AQSLozK7aA">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Gypsy Woman</div>
-        <div class="artist">Crystal Waters</div>
-        <div class="by">Ha</div>
-        <div class="links">
-          <a href="https://www.youtube.com/watch?v=_KztNIg4cvE">youtube</a>
-        </div>
-      </li>
-    </ol>
-
-    <h2>Eerder gedaan</h2>
-    <p class="section-note">Al gespeeld — handig als encore / warm-up.</p>
-    <ol>
-      <li>
-        <div class="title">Dance The Night</div>
-        <div class="artist">Dua Lipa</div>
-        <div class="by">eerder</div>
-        <div class="links">
-          <a href="https://www.youtube.com/watch?v=OiC1rgCPmUQ">youtube</a>
-        </div>
-        <div class="note">Niet te verwarren met Van Halen — Dance the Night Away</div>
-      </li>
-      <li>
-        <div class="title">Human</div>
-        <div class="artist">Rag'n'Bone Man</div>
-        <div class="by">eerder</div>
-        <div class="links">
-          <a href="https://coentjo.github.io/songbooks/Human.pdf">pdf</a>
-          <a href="https://www.youtube.com/watch?v=L3wKzyIN1yk">youtube</a>
-        </div>
-      </li>
-      <li>
-        <div class="title">Lágrimas Negras</div>
-        <div class="artist">Celia Cruz</div>
-        <div class="by">eerder</div>
-        <div class="links">
-          <a href="https://www.youtube.com/watch?v=eFq8njahXdI">youtube</a>
-        </div>
-      </li>
-    </ol>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nummer</th>
+            <th>Artiest</th>
+            <th>Door</th>
+            <th>Links</th>
+            <th>Notitie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="num">1</td>
+            <td class="song-title">See Me Now</td>
+            <td class="artist-cell">Lø Spirit</td>
+            <td><span class="who-cell">St</span></td>
+            <td class="links"><a href="https://youtu.be/dMmxdvEIMz0">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">2</td>
+            <td class="song-title">Three Kobolds in a Trenchcoat</td>
+            <td class="artist-cell">Chase Noseworthy</td>
+            <td><span class="who-cell">St</span></td>
+            <td class="links"><a href="https://youtu.be/QsLN542nvGg">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">3</td>
+            <td class="song-title">Ghosts</td>
+            <td class="artist-cell">Rag'n'Bone Man</td>
+            <td><span class="who-cell">St</span></td>
+            <td class="links"><a href="https://youtu.be/t9yRH7-4lz8">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">4</td>
+            <td class="song-title">What Do You Believe In?</td>
+            <td class="artist-cell">Rag'n'Bone Man</td>
+            <td><span class="who-cell">St</span></td>
+            <td class="links"><a href="https://youtu.be/L4C2tF4YzFU">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">5</td>
+            <td class="song-title">Abracadabra</td>
+            <td class="artist-cell">Steve Miller Band</td>
+            <td><span class="who-cell">Co</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/Abracadabra.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=tY8B0uQpwZs">youtube</a>
+            </td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">6</td>
+            <td class="song-title">Demasiado Corazón</td>
+            <td class="artist-cell">Mink DeVille</td>
+            <td><span class="who-cell">Co</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=XA9Zy2t0VHk">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">7</td>
+            <td class="song-title">Fields of Gold</td>
+            <td class="artist-cell">Sting</td>
+            <td><span class="who-cell">Co</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/Fields_of_Gold.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=KLVq0IAzh1A">youtube</a>
+            </td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">8</td>
+            <td class="song-title">Friday I'm in Love</td>
+            <td class="artist-cell">The Cure</td>
+            <td><span class="who-cell">Co</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/Friday_Im_in_Love.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=mGgMZpGYiy8">youtube</a>
+            </td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">9</td>
+            <td class="song-title">One Way</td>
+            <td class="artist-cell">The Levellers</td>
+            <td><span class="who-cell">Co</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=u0S8RNkL5Wg">youtube</a></td>
+            <td class="note">There's only one way of life…</td>
+          </tr>
+          <tr>
+            <td class="num">10</td>
+            <td class="song-title">Walk Walk</td>
+            <td class="artist-cell">Sylvie Kreusch</td>
+            <td><span class="who-cell">Co</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/Walk_walk.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=h388IMquh6I">youtube</a>
+            </td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">11</td>
+            <td class="song-title">Friday on My Mind</td>
+            <td class="artist-cell">The Easybeats</td>
+            <td><span class="who-cell">Ti</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/Friday_on_My_Mind.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=dnqxbdnzlhw">youtube</a>
+            </td>
+            <td class="note">Bowie-cover bestaat ook</td>
+          </tr>
+          <tr>
+            <td class="num">12</td>
+            <td class="song-title">Colors</td>
+            <td class="artist-cell">Black Pumas</td>
+            <td><span class="who-cell">Ti</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=2EntxPIULUI">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">13</td>
+            <td class="song-title">Life's Too Short</td>
+            <td class="artist-cell">Madcon</td>
+            <td><span class="who-cell">Ti</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=Ewj1dSZ5Ews">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">14</td>
+            <td class="song-title">There There</td>
+            <td class="artist-cell">Radiohead</td>
+            <td><span class="who-cell">Ha</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/There_There.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=7AQSLozK7aA">youtube</a>
+            </td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">15</td>
+            <td class="song-title">Gypsy Woman</td>
+            <td class="artist-cell">Crystal Waters</td>
+            <td><span class="who-cell">Ha</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=_KztNIg4cvE">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">16</td>
+            <td class="song-title">Dance The Night</td>
+            <td class="artist-cell">Dua Lipa</td>
+            <td><span class="who-cell">eerder</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=OiC1rgCPmUQ">youtube</a></td>
+            <td class="note">≠ Van Halen — Dance the Night Away</td>
+          </tr>
+          <tr>
+            <td class="num">17</td>
+            <td class="song-title">Human</td>
+            <td class="artist-cell">Rag'n'Bone Man</td>
+            <td><span class="who-cell">eerder</span></td>
+            <td class="links">
+              <a href="https://coentjo.github.io/songbooks/Human.pdf">pdf</a>
+              <a href="https://www.youtube.com/watch?v=L3wKzyIN1yk">youtube</a>
+            </td>
+            <td class="note"></td>
+          </tr>
+          <tr>
+            <td class="num">18</td>
+            <td class="song-title">Lágrimas Negras</td>
+            <td class="artist-cell">Celia Cruz</td>
+            <td><span class="who-cell">eerder</span></td>
+            <td class="links"><a href="https://www.youtube.com/watch?v=eFq8njahXdI">youtube</a></td>
+            <td class="note"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <footer>
       Songbooks:
