@@ -71,8 +71,8 @@
     .shortlist li {
       counter-increment: short;
       display: grid;
-      grid-template-columns: 2rem 1fr auto;
-      gap: 0.5rem;
+      grid-template-columns: 2rem auto 1fr auto;
+      gap: 0.45rem 0.65rem;
       align-items: baseline;
       padding: 0.75rem 1rem;
       border-top: 1px solid var(--line);
@@ -83,13 +83,16 @@
       color: var(--accent);
       font-weight: 600;
     }
-    .shortlist .empty {
-      color: var(--muted);
-      font-style: italic;
-      grid-column: 2 / -1;
-    }
+    .shortlist .meta { min-width: 0; }
     .shortlist .title { font-weight: 600; }
     .shortlist .artist { color: var(--muted); font-size: 0.9rem; }
+    .shortlist .note {
+      color: var(--muted);
+      font-style: italic;
+      font-size: 0.8rem;
+      display: block;
+      margin-top: 0.15rem;
+    }
     .shortlist .links a {
       color: var(--link);
       text-decoration: none;
@@ -97,6 +100,15 @@
       margin-left: 0.65rem;
     }
     .shortlist .links a:hover { text-decoration: underline; }
+    @media (max-width: 40rem) {
+      .shortlist li {
+        grid-template-columns: 2rem auto 1fr;
+      }
+      .shortlist .links {
+        grid-column: 3;
+        justify-self: start;
+      }
+    }
 
     /* Gallore table */
     .table-wrap {
@@ -167,12 +179,125 @@
     <p class="who">Crush-trio + Co. Eenmalig? Misschien niet. <em>Come together…</em></p>
 
     <h2>Shortlist</h2>
-    <p class="section-note">Wat we écht gaan spelen — kies uit Gallore hieronder.</p>
+    <p class="section-note">~2 per persoon (St: 4 voorlopig — Ti checkt wat ze kan zingen).</p>
     <ol class="shortlist">
-      <li><span class="empty">nog leeg…</span></li>
-      <li><span class="empty">nog leeg…</span></li>
-      <li><span class="empty">nog leeg…</span></li>
-      <li><span class="empty">nog leeg…</span></li>
+      <li>
+        <span class="who-cell">Ha</span>
+        <div class="meta">
+          <div class="title">There There</div>
+          <div class="artist">Radiohead</div>
+        </div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/There_There.pdf">pdf</a>
+          <a href="https://www.youtube.com/watch?v=7AQSLozK7aA">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">Ha</span>
+        <div class="meta">
+          <div class="title">Gypsy Woman</div>
+          <div class="artist">Crystal Waters</div>
+        </div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=_KztNIg4cvE">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">St</span>
+        <div class="meta">
+          <div class="title">See Me Now</div>
+          <div class="artist">Lø Spirit</div>
+          <span class="note">Ti: zingbaarheid?</span>
+        </div>
+        <div class="links">
+          <a href="https://youtu.be/dMmxdvEIMz0">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">St</span>
+        <div class="meta">
+          <div class="title">Three Kobolds in a Trenchcoat</div>
+          <div class="artist">Chase Noseworthy</div>
+          <span class="note">Ti: zingbaarheid?</span>
+        </div>
+        <div class="links">
+          <a href="https://youtu.be/QsLN542nvGg">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">St</span>
+        <div class="meta">
+          <div class="title">Ghosts</div>
+          <div class="artist">Rag'n'Bone Man</div>
+          <span class="note">Ti: zingbaarheid?</span>
+        </div>
+        <div class="links">
+          <a href="https://youtu.be/t9yRH7-4lz8">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">St</span>
+        <div class="meta">
+          <div class="title">What Do You Believe In?</div>
+          <div class="artist">Rag'n'Bone Man</div>
+          <span class="note">Ti: zingbaarheid?</span>
+        </div>
+        <div class="links">
+          <a href="https://youtu.be/L4C2tF4YzFU">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">Ti</span>
+        <div class="meta">
+          <div class="title">Friday on My Mind</div>
+          <div class="artist">David Bowie (Easybeats)</div>
+        </div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/Friday_on_My_Mind.pdf">pdf</a>
+          <a href="https://youtu.be/WK4xmmk5B1s">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">Ti</span>
+        <div class="meta">
+          <div class="title">Colors</div>
+          <div class="artist">Black Pumas</div>
+        </div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=2EntxPIULUI">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">Ti</span>
+        <div class="meta">
+          <div class="title">Life's Too Short</div>
+          <div class="artist">Madcon</div>
+        </div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=Ewj1dSZ5Ews">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">Co</span>
+        <div class="meta">
+          <div class="title">Abracadabra</div>
+          <div class="artist">Steve Miller Band</div>
+        </div>
+        <div class="links">
+          <a href="https://coentjo.github.io/songbooks/Abracadabra.pdf">pdf</a>
+          <a href="https://www.youtube.com/watch?v=tY8B0uQpwZs">youtube</a>
+        </div>
+      </li>
+      <li>
+        <span class="who-cell">Co</span>
+        <div class="meta">
+          <div class="title">Demasiado Corazón</div>
+          <div class="artist">Mink DeVille</div>
+        </div>
+        <div class="links">
+          <a href="https://www.youtube.com/watch?v=XA9Zy2t0VHk">youtube</a>
+        </div>
+      </li>
     </ol>
 
     <h2>Gallore</h2>
@@ -286,13 +411,14 @@
           <tr>
             <td class="num">11</td>
             <td class="song-title">Friday on My Mind</td>
-            <td class="artist-cell">The Easybeats</td>
+            <td class="artist-cell">David Bowie (Easybeats)</td>
             <td><span class="who-cell">Ti</span></td>
             <td class="links">
               <a href="https://coentjo.github.io/songbooks/Friday_on_My_Mind.pdf">pdf</a>
-              <a href="https://www.youtube.com/watch?v=dnqxbdnzlhw">youtube</a>
+              <a href="https://youtu.be/WK4xmmk5B1s">youtube (Bowie)</a>
+              <a href="https://www.youtube.com/watch?v=dnqxbdnzlhw">youtube (Easybeats)</a>
             </td>
-            <td class="note">Bowie-cover bestaat ook</td>
+            <td class="note">Shortlist: Bowie-versie</td>
           </tr>
           <tr>
             <td class="num">12</td>
