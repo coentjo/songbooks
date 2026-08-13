@@ -1,0 +1,32 @@
+---
+description: Jam song sheets — if chords loop the whole song, only show them at the top
+globs: "**/song.tex"
+alwaysApply: false
+---
+
+# Loop chords only at the top
+
+When a song uses the **same chord progression throughout** (e.g. 3–5 chords in a repeating loop):
+
+1. Put the chords **once** at the top in a `\beginverse*` / `{\nolyrics …}` jam-chart line
+2. Mark it clearly with **`(Loop)`**
+3. **Do not** place `\[…]` chords inside verses or choruses
+4. Lyrics stay chord-free so they stay readable and fit one page better
+
+```tex
+% ✅ GOOD
+\beginverse*
+{\nolyrics Jam chart: \[Em] \[G] \[Bm] \[Bm] \quad (Loop)}
+\endverse
+
+\beginverse
+I fell in love with impossible \brk  Shook hands with a man named intangible
+\endverse
+
+% ❌ BAD — same loop repeated above random words
+\beginverse
+I fell in love with im\[Em]possible \brk  Shook hands with a man named in\[G]tangible
+\endverse
+```
+
+Only keep inline chords when the progression **changes by section** (different verse/chorus/bridge charts).
